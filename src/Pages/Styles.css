@@ -13,7 +13,7 @@
   align-items: center;
   height: 90vh;
   line-height: 45px;
-  background-image: url("src/assets/airplane.jpeg");
+  background-image: url("/src/assets/airplane.jpeg");
   background-size: cover;
   background-position: center;
   color: white;
