@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaGoogle } from "react-icons/fa";
+import './Styles.css'
 
 
 
