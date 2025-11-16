@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #003366 0%, #004d99 100%);
+  padding: 15px 30px;
+  color: white;
+  box-shadow: 0 4px 20px rgba(0, 51, 102, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-neon {
+  transition: all 0.3s cubic-bezier(0.4, 2, 0.2, 2);
+}
+
+.nav-neon:hover {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6),
+    0 0 10px rgba(102, 126, 234, 0.5), 0 0 15px rgba(102, 126, 234, 0.3);
+  transform: translateY(-2px);
+}
+
+.navlogo {
+  position: relative;
+  left: -500px;
+  opacity: 0;
+}
+
+.navlogo:hover {
+  cursor: pointer;
+  transform: translate(0, -5px);
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  position: relative;
+}
+
+.navLinks a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  transition: width 0.3s ease;
+}
+
+.navLinks a:hover::after {
+  width: 100%;
+}
+
+.navLinks a:hover {
+  transform: translate(0, -5px);
+}
+
+.navLinks {
+  display: flex;
+  gap: 50px;
+  position: relative;
+  left: -1000px;
+  opacity: 0;
+}
+
+.alternate {
+  position: relative;
+}
+
+.opposite {
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .navLinks a {
+    font-size: 15px;
+  }
+
+  .navLinks {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger:hover {
+    transform: scale(1.2);
+  }
+
+  .navlogo {
+    position: relative;
+    left: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .navlogo h2 {
+    font-size: 1.3em;
+  }
+
+  .navLinks {
+    display: none !important;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #003366 0%, #004d99 100%);
+    padding: 20px;
+    width: 100%;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navLinks.active {
+    display: flex !important;
+  }
+
+  .navLinks a {
+    font-size: 14px;
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navLinks a:last-child {
+    border-bottom: none;
+  }
+
+  .logout {
+    border-bottom: none;
+  }
+}
