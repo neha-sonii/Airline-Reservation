@@ -1,11 +1,13 @@
 import React from 'react'
 import './Styles.css'
+import { useNavigate } from "react-router-dom";
 
 
 function Home() {
+      const navigate = useNavigate();
 
 function hadleBooking() {
-  window.location.href = "/flights";
+  navigate('/flights');
 }
 
   return (
