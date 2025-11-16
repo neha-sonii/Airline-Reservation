@@ -22,7 +22,7 @@
 }
 
 .nav-neon {
-  transition: all 0.3s cubic-bezier(0.4, 2, 0.2, 2);
+  transition: all 0.3s cubic-bezier(0.4, 1, 0.2, 1);
 }
 
 .nav-neon:hover {
