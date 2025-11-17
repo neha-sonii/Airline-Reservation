@@ -3,18 +3,12 @@ import './App.css'
 import Home from './Pages/Home'
 import Navbar from './components/Navbar'
 import "/script.js"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Flights from './Pages/Flights'
 import Bookings from './Pages/Bookings'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import { useNavigate } from "react-router-dom";
-
-
-// there should be one user of a name and password
-// when login or register both are display none and seen logout button istead of them.
-// logout button will clear the old user state
-
 
 const mockflights = [
   {
@@ -33,10 +27,8 @@ const mockflights = [
  }
 ]
 
-
-
 function App() {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
 // extract data from the object
  const [flight, setflight] = useState(mockflights)
@@ -69,8 +61,6 @@ const [oldUsers, setOldUsers] = useState(() => {
     return [];
   }
  });
-
-//  set input values for login and register
 
 
 useEffect(() => {
@@ -115,7 +105,6 @@ function loginUser(e) {
   console.log("old user", oldUsers);
 }
 
-
 //  to change the input values
  function HandleChange(e) {
   setInputValues(prev => {
@@ -143,7 +132,6 @@ console.log(selectedSeat);
 
 const isLoggedIn = oldUsers.length > 0 && newusers.length > 0;
  
-
   return (
     <>
       <Navbar isLoggedIn={isLoggedIn} setOldUsers={setOldUsers} />
