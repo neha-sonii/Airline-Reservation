@@ -29,7 +29,7 @@ A modern, responsive web application for booking airline flights with an elegant
 
 - **Frontend**: React 18+
 - **Routing**: React Router DOM
-- **Icons**: React Icons (FaBars, FaTimes, FaGoogle)
+- **Icons**: React Icons (FaBars, FaTimes)
 - **Styling**: CSS3 with animations
 - **State Management**: React Hooks (useState, useEffect)
 - **Storage**: Browser localStorage
