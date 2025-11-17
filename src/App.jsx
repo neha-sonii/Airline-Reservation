@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Home from './Pages/Home'
 import Navbar from './components/Navbar'
-import "./script.js"
+import "../script.js"
 import { Routes, Route } from "react-router-dom";
 import Flights from './Pages/Flights'
 import Bookings from './Pages/Bookings'
