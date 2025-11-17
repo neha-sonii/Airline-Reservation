@@ -88,7 +88,6 @@ function handleRegisteredUsers(e,newUser) {
       navigate("/login");
 
     }
-    console.log("registe user", newusers);
 
     //  Login an existing user
 function loginUser(e) {
@@ -102,7 +101,6 @@ function loginUser(e) {
   } else {
     alert("User not found");
   }
-  console.log("old user", oldUsers);
 }
 
 //  to change the input values
@@ -114,7 +112,6 @@ function loginUser(e) {
     }
   })
 }
- console.log("input value", inputValues.username, inputValues.password);
  
  //  To select the flights and seats
  function handleSeatSelected(flightName, seat, date) {
